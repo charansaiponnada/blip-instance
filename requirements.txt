@@ -2,3 +2,4 @@ transformers
 safetensors
 opencv-python
 Pillow
+pyttsx3
