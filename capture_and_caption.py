@@ -81,13 +81,16 @@ def generate_caption(processor, model, pil_img, device, max_length=50):
     return caption
 
 
-def draw_caption(frame, caption: str):
+def draw_caption(frame, caption: str, gen_time: float = None):
     overlay = frame.copy()
     h, w = frame.shape[:2]
     # simple single-line caption at bottom
     cv2.rectangle(overlay, (0, h - 60), (w, h), (0, 0, 0), -1)
     cv2.addWeighted(overlay, 0.6, frame, 0.4, 0, frame)
-    cv2.putText(frame, caption, (10, h - 20), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
+    text = caption
+    if gen_time is not None:
+        text += f"  ({gen_time:.2f}s)"
+    cv2.putText(frame, text, (10, h - 20), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
     return frame
 
 
@@ -119,6 +122,7 @@ def main():
     cooldown = 1.5
 
     try:
+        gen_time = None
         while True:
             ret, frame = cap.read()
             if not ret:
@@ -129,16 +133,19 @@ def main():
             if now - last_time > cooldown:
                 rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                 pil = Image.fromarray(rgb)
+                t_start = time.time()
                 try:
                     caption = generate_caption(processor, model, pil, device, max_length=args.max_length)
                 except Exception as e:
                     caption = f"(error: {e})"
+                t_end = time.time()
+                gen_time = t_end - t_start
                 last_caption = caption
                 last_time = now
-                print("Caption:", caption)
+                print(f"Caption: {caption}  (generated in {gen_time:.2f}s)")
                 tts.speak(caption)
 
-            out = draw_caption(frame, last_caption)
+            out = draw_caption(frame, last_caption, gen_time)
             cv2.imshow("Captioner - q to quit", out)
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
