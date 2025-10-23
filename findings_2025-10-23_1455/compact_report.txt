@@ -1,0 +1,16 @@
+Weight diff compact report
+========================
+Total params compared: 247414076
+Changed params: 49544548 (20.02%)
+
+Top affected tensors (L2 norm):
+ - text_decoder.bert.encoder.layer.11.crossattention.self.value.weight: L2=0.38830792903900146, nonzero=589823/589824
+ - text_decoder.bert.encoder.layer.10.crossattention.self.value.weight: L2=0.365354984998703, nonzero=589823/589824
+ - text_decoder.bert.encoder.layer.9.crossattention.self.value.weight: L2=0.34805619716644287, nonzero=589823/589824
+ - text_decoder.bert.encoder.layer.11.crossattention.self.query.weight: L2=0.3440527319908142, nonzero=589822/589824
+ - text_decoder.bert.encoder.layer.8.crossattention.self.value.weight: L2=0.3323708474636078, nonzero=589823/589824
+ - text_decoder.bert.encoder.layer.11.attention.self.value.weight: L2=0.3268548250198364, nonzero=589822/589824
+ - text_decoder.bert.encoder.layer.10.attention.self.value.weight: L2=0.3262535035610199, nonzero=589823/589824
+ - text_decoder.bert.encoder.layer.10.crossattention.self.query.weight: L2=0.3250091075897217, nonzero=589821/589824
+ - text_decoder.bert.encoder.layer.7.crossattention.self.value.weight: L2=0.31077829003334045, nonzero=589823/589824
+ - text_decoder.bert.encoder.layer.9.crossattention.self.query.weight: L2=0.3073221743106842, nonzero=589823/589824
