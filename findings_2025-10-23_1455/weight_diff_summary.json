@@ -1,0 +1,71 @@
+{
+  "num_common_tensors": 472,
+  "num_only_local_tensors": 0,
+  "num_only_remote_tensors": 2,
+  "total_params_compared": 247414076,
+  "changed_params": 49544548,
+  "fraction_changed": 0.2002495120770736,
+  "sum_sq_delta": 3.9477216737626577,
+  "top10": [
+    {
+      "key": "text_decoder.bert.encoder.layer.11.crossattention.self.value.weight",
+      "l2": 0.38830792903900146,
+      "nonzero": 589823,
+      "total": 589824
+    },
+    {
+      "key": "text_decoder.bert.encoder.layer.10.crossattention.self.value.weight",
+      "l2": 0.365354984998703,
+      "nonzero": 589823,
+      "total": 589824
+    },
+    {
+      "key": "text_decoder.bert.encoder.layer.9.crossattention.self.value.weight",
+      "l2": 0.34805619716644287,
+      "nonzero": 589823,
+      "total": 589824
+    },
+    {
+      "key": "text_decoder.bert.encoder.layer.11.crossattention.self.query.weight",
+      "l2": 0.3440527319908142,
+      "nonzero": 589822,
+      "total": 589824
+    },
+    {
+      "key": "text_decoder.bert.encoder.layer.8.crossattention.self.value.weight",
+      "l2": 0.3323708474636078,
+      "nonzero": 589823,
+      "total": 589824
+    },
+    {
+      "key": "text_decoder.bert.encoder.layer.11.attention.self.value.weight",
+      "l2": 0.3268548250198364,
+      "nonzero": 589822,
+      "total": 589824
+    },
+    {
+      "key": "text_decoder.bert.encoder.layer.10.attention.self.value.weight",
+      "l2": 0.3262535035610199,
+      "nonzero": 589823,
+      "total": 589824
+    },
+    {
+      "key": "text_decoder.bert.encoder.layer.10.crossattention.self.query.weight",
+      "l2": 0.3250091075897217,
+      "nonzero": 589821,
+      "total": 589824
+    },
+    {
+      "key": "text_decoder.bert.encoder.layer.7.crossattention.self.value.weight",
+      "l2": 0.31077829003334045,
+      "nonzero": 589823,
+      "total": 589824
+    },
+    {
+      "key": "text_decoder.bert.encoder.layer.9.crossattention.self.query.weight",
+      "l2": 0.3073221743106842,
+      "nonzero": 589823,
+      "total": 589824
+    }
+  ]
+}

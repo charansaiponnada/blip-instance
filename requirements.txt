@@ -3,3 +3,5 @@ safetensors
 opencv-python
 Pillow
 pyttsx3
+matplotlib
+tqdm
