@@ -1,7 +1,7 @@
 # Webcam captioning with local BLIP model
 
 This small utility captures frames from your webcam and generates captions using a locally finetuned BLIP model (a VLM).
-
+**Note:** To use the mobile cam, [click here](## Mobile Cam) for instructions.
 Prereqs
 - Python 3.8+ installed
 - GPU + CUDA (optional) for faster inference. CPU will work but may be slow.
@@ -48,3 +48,7 @@ Troubleshooting
 Security & performance notes
 - Generating captions on CPU may be slow. For smoother real-time behavior, use a CUDA-enabled GPU.
 - This script loads the model once and reuses it for frames. If you want to caption only on-demand (e.g., key press), modify the loop accordingly.
+ ----
+## Mobile Cam
+ To use the mobile cam connect using the droid cam withing the same wifi first run the [test.py](./test.py) file to check in which the cam is operating note the index change inside the code of mobile_cam.py
+ This will make the use of the mobile cam via droid cam.
