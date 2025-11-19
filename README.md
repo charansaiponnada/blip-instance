@@ -1,7 +1,7 @@
 # Webcam captioning with local BLIP model
 
 This small utility captures frames from your webcam and generates captions using a locally finetuned BLIP model (a VLM).
-**Note:** To use the mobile cam, [click here](## Mobile Cam) for instructions.
+
 Prereqs
 - Python 3.8+ installed
 - GPU + CUDA (optional) for faster inference. CPU will work but may be slow.
